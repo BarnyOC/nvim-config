@@ -1,5 +1,5 @@
 require("config.lazy")
-vim.cmd [[colorscheme github_dark]]
+vim.cmd [[colorscheme cyberdream]]
 
 require("config.options")
 require("config.key-maps")
