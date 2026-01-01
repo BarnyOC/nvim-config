@@ -13,3 +13,12 @@ vim.o.splitright = true
 vim.o.splitbelow = true
 vim.o.splitkeep = 'screen'
 vim.opt.mouse = ""
+
+--set background to transparent
+vim.cmd [[
+  highlight Normal guibg=none
+  highlight NormalNC guibg=none
+  highlight NonText guibg=none
+  highlight Normal ctermbg=none
+  highlight NonText ctermbg=none
+]]
