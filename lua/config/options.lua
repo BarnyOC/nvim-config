@@ -1,24 +1,110 @@
-vim.o.expandtab = true
-vim.o.tabstop = 2
-vim.o.softtabstop = 2
-vim.o.shiftwidth = 2
-vim.o.relativenumber = true
-vim.o.number = true
-vim.o.guicursor = 'n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175'
-vim.o.syntax = 'enable'
-vim.o.wrap = true
-vim.o.showbreak = '↪'
-vim.opt.fillchars = { eob = " " }
-vim.o.splitright = true
-vim.o.splitbelow = true
-vim.o.splitkeep = 'screen'
-vim.opt.mouse = ""
+--Transparency Settings
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
 
---set background to transparent
-vim.cmd [[
-  highlight Normal guibg=none
-  highlight NormalNC guibg=none
-  highlight NonText guibg=none
-  highlight Normal ctermbg=none
-  highlight NonText ctermbg=none
-]]
+-- Basic Settings
+vim.opt.number = true                              -- Line numbers
+vim.opt.relativenumber = true                      -- Relative line numbers
+vim.opt.cursorline = true                          -- Highlight current line
+vim.opt.wrap = false                               -- Don't wrap lines
+vim.opt.showbreak = '↪'
+vim.opt.scrolloff = 10                             -- Keep 10 lines above/below cursor 
+vim.opt.sidescrolloff = 8                          -- Keep 8 columns left/right of cursor
+vim.opt.fillchars = { eob = " " }
+
+-- Indentation Settings
+vim.opt.tabstop = 4                                -- Tab width
+vim.opt.shiftwidth = 4                             -- Indent width
+vim.opt.softtabstop = 2                            -- Soft tab stop
+vim.opt.expandtab = true                           -- Use spaces instead of tabs
+vim.opt.smartindent = true                         -- Smart auto-indenting
+vim.opt.autoindent = true                          -- Copy indent from current line
+
+-- Search Settings
+vim.opt.ignorecase = true                          -- Case insensitive search
+vim.opt.smartcase = true                           -- Case sensitive if uppercase in search
+vim.opt.hlsearch = false                           -- Don't highlight search results 
+vim.opt.incsearch = true
+
+-- Viusal Settings
+vim.opt.termguicolors = true                       -- Enable 24-bit colors
+vim.opt.signcolumn = "yes"                         -- Always show sign column
+--vim.opt.colorcolumn = "100"                        -- Show column at 100 characters
+vim.opt.showmatch = true                           -- Highlight matching brackets
+vim.opt.matchtime = 2                              -- How long to show matching bracket
+vim.opt.cmdheight = 1                              -- Command line height
+--vim.opt.completeopt = "menuone,noinsert,noselect"  -- Completion options 
+vim.opt.showmode = false                           -- Don't show mode in command line 
+vim.opt.pumheight = 10                             -- Popup menu height 
+vim.opt.pumblend = 10                              -- Popup menu transparency 
+vim.opt.winblend = 0                               -- Floating window transparency 
+vim.opt.conceallevel = 0                           -- Don't hide markup 
+vim.opt.concealcursor = ""                         -- Don't hide cursor line markup 
+vim.opt.lazyredraw = true                          -- Don't redraw during macros
+vim.opt.synmaxcol = 300                            -- Syntax highlighting limit 
+
+-- Behaviour Settings
+vim.opt.hidden = true                              -- Allow hidden buffers
+vim.opt.errorbells = false                         -- No error bells
+vim.opt.backspace = "indent,eol,start"             -- Better backspace behavior
+vim.opt.autochdir = false                          -- Don't auto change directory
+vim.opt.iskeyword:append("-")                      -- Treat dash as part of word
+vim.opt.path:append("**")                          -- include subdirectories in search
+vim.opt.selection = "exclusive"                    -- Selection behavior
+vim.opt.mouse = ""                                -- Enable mouse support
+vim.opt.clipboard:append("unnamedplus")            -- Use system clipboard
+vim.opt.modifiable = true                          -- Allow buffer modifications
+vim.opt.encoding = "UTF-8"                         -- Set encoding
+
+-- Cursor Settings
+vim.o.guicursor = 'n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175'
+
+-- Splits Settings
+vim.opt.splitbelow = true                          -- Horizontal splits go below
+vim.opt.splitright = true                          -- Vertical splits go right
+
+-- Basic autocommands
+local augroup = vim.api.nvim_create_augroup("UserConfig", {})
+
+-- Highlight yanked text
+vim.api.nvim_create_autocmd("TextYankPost", {
+  group = augroup,
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
+
+-- Command-line completion
+vim.opt.wildmenu = true
+vim.opt.wildmode = "longest:full,full"
+vim.opt.wildignore:append({ "*.o", "*.obj", "*.pyc", "*.class", "*.jar" })
+
+-- Performance improvements
+vim.opt.redrawtime = 10000
+vim.opt.maxmempattern = 20000
+
+
+-- Legacy Settings
+--vim.o.expandtab = true
+--vim.o.tabstop = 2
+--vim.o.softtabstop = 2
+--vim.o.shiftwidth = 2
+--vim.o.relativenumber = true
+--vim.o.number = true
+--vim.o.syntax = 'enable'
+--vim.o.wrap = true
+--vim.opt.fillchars = { eob = " " }
+--vim.o.splitright = true
+--vim.o.splitbelow = true
+--vim.o.splitkeep = 'screen'
+--vim.opt.mouse = ""
+--
+----set background to transparent
+--vim.cmd [[
+--  highlight Normal guibg=none
+--  highlight NormalNC guibg=none
+--  highlight NonText guibg=none
+--  highlight Normal ctermbg=none
+--  highlight NonText ctermbg=none
+--]]
