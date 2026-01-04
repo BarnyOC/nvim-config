@@ -32,10 +32,10 @@ vim.keymap.set("n", "K", "<C-u>zz", { desc = "Half page up (centered)" })
 vim.keymap.set("n", "Y", "y$", { desc = "Yank to end of line" })
 
 --Writing/Quitting
-vim.keymap.set("n","<leader>q",":q<cr>",{nowait=true})
-vim.keymap.set("n","<leader>Q",":q!<cr>",{nowait=true})
-vim.keymap.set("n","<leader>w",":w<cr>",{nowait=true})
-vim.keymap.set("n","<leader>W",":wq<cr>",{nowait=true})
+vim.keymap.set("n","<leader>q",":bd<cr>",{nowait=true,desc="Quit buffer"})
+vim.keymap.set("n","<leader>u",":u0<cr>",{nowait=true,desc="Undo all changes in buffer"})
+vim.keymap.set("n","<leader><ESC><ESC>",":q!<cr>",{nowait=true,desc="Quit Neovim"})
+vim.keymap.set("n","<leader>w",":w<cr>",{nowait=true,desc="Write buffer"})
 
 --Splits
 vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", { desc = "Split window vertically" })
@@ -50,11 +50,11 @@ vim.keymap.set("n","<leader>tr",":windo terminal<CR>")
 vim.keymap.set("t","<esc>","<C-\\><C-n>")
 
 --Diagnostics
-vim.keymap.set("n","<C-i>",":lua vim.diagnostic.open_float()<cr>")
+--vim.keymap.set("n","<C-i>",":lua vim.diagnostic.open_float()<cr>")
 
 -- Quick config editing
 vim.keymap.set("n", "<leader>rl", ":so $MYVIMRC<CR>", { desc = "Reload config" })
 
 -- Buffer Navigation
 vim.keymap.set("n",",",":bprevious<CR>",{nowait=true,silent=true})
-Vim.keymap.set("n",".",":bnext<CR>",{nowait=true,silent=true})
+vim.keymap.set("n",".",":bnext<CR>",{nowait=true,silent=true})
