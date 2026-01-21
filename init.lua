@@ -9,4 +9,4 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.cmd [[colorscheme cyberdream]]
 require("config.options")
 require("config.key-maps")
-
+require("config.godot")
