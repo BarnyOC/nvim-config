@@ -11,7 +11,11 @@ return
         -- 'super-tab' for mappings similar to vscode (tab to accept)
         -- 'enter' for enter to accept
         -- 'none' for no mappings
-        keymap = { preset = 'super-tab' },
+        keymap = { 
+            preset = 'super-tab',
+              ['<C-k>'] = { 'select_prev', 'fallback' },
+              ['<C-j>'] = { 'select_next', 'fallback' }, 
+          },
         appearance = {
           nerd_font_variant = 'mono'
         },
