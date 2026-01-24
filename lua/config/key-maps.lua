@@ -1,4 +1,5 @@
 --Leader key
+vim.keymap.set("n"," ","<nop>")
 vim.g.mapleader = " "
 
 --Motions
@@ -49,16 +50,26 @@ vim.keymap.set("n", "<C-Down>", ":resize -2<CR>", { desc = "Decrease window heig
 vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", { desc = "Decrease window width" })
 vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { desc = "Increase window width" })
 
---Terminal
-vim.keymap.set("n","<leader>tr",":windo terminal<CR>")
-vim.keymap.set("t","<esc>","<C-\\><C-n>")
-
---Diagnostics
---vim.keymap.set("n","<C-i>",":lua vim.diagnostic.open_float()<cr>")
-
 -- Quick config editing
 vim.keymap.set("n", "<leader>rl", ":so $MYVIMRC<CR>", { desc = "Reload config" })
 
 -- Buffer Navigation
 vim.keymap.set("n","<S-h>",":bprevious<CR>",{nowait=true,silent=true})
 vim.keymap.set("n","<S-l>",":bnext<CR>",{nowait=true,silent=true})
+
+-- Encapsulate
+vim.keymap.set("n",'<Leader>"c','0i"<ESC>A"<ESC>'   ,{desc = 'Surround line with ""'})
+vim.keymap.set("n",'<Leader>"w','ciw""<ESC>P'       ,{desc = 'Surround word with ""'})
+vim.keymap.set("n",'<Leader>"$','c$""<ESC>P'        ,{desc = 'Surround cursor to end of line with ""'})
+
+vim.keymap.set("n",'<Leader>(c','0i(<ESC>A)<ESC>',{desc = 'Surround line with ()'})
+vim.keymap.set("n",'<Leader>($','c$()<ESC>P',{desc = 'Surround word with ()'})
+vim.keymap.set("n",'<Leader>(w','ciw()<ESC>P',{desc = 'Surround cursor to end of line with ()'})
+
+vim.keymap.set("n",'<Leader>[c','0i[<ESC>A]<ESC>',{desc = 'Surround line with []'})
+vim.keymap.set("n",'<Leader>[$','c$[]<ESC>P',{desc = 'Surround word with []'})
+vim.keymap.set("n",'<Leader>[w','ciw[]<ESC>P',{desc = 'Surround cursor to end of line with []'})
+
+vim.keymap.set("n",'<Leader>{c','0i{<ESC>A}<ESC>',{desc = 'Surround line with {}'})
+vim.keymap.set("n",'<Leader>{$','c${}<ESC>P',{desc = 'Surround word with {}'})
+vim.keymap.set("n",'<Leader>{w','ciw{}<ESC>P',{desc = 'Surround cursor to end of line with {}'})
