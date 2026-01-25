@@ -62,14 +62,18 @@ vim.keymap.set("n",'<Leader>"c','0i"<ESC>A"<ESC>'   ,{desc = 'Surround line with
 vim.keymap.set("n",'<Leader>"w','ciw""<ESC>P'       ,{desc = 'Surround word with ""'})
 vim.keymap.set("n",'<Leader>"$','c$""<ESC>P'        ,{desc = 'Surround cursor to end of line with ""'})
 
+vim.keymap.set("n","<Leader>'c","0i'<ESC>A'<ESC>"   ,{desc = "Surround line with ''"})
+vim.keymap.set("n","<Leader>'w","ciw''<ESC>P"       ,{desc = "Surround word with ''"})
+vim.keymap.set("n","<Leader>'$","c$''<ESC>P"        ,{desc = "Surround cursor to end of line with ''"})
+
 vim.keymap.set("n",'<Leader>(c','0i(<ESC>A)<ESC>',{desc = 'Surround line with ()'})
-vim.keymap.set("n",'<Leader>($','c$()<ESC>P',{desc = 'Surround word with ()'})
-vim.keymap.set("n",'<Leader>(w','ciw()<ESC>P',{desc = 'Surround cursor to end of line with ()'})
+vim.keymap.set("n",'<Leader>($','c$()<ESC>P',{desc = 'Surround cursor to end of line word with ()'})
+vim.keymap.set("n",'<Leader>(w','ciw()<ESC>P',{desc = 'Surround word with ()'})
 
 vim.keymap.set("n",'<Leader>[c','0i[<ESC>A]<ESC>',{desc = 'Surround line with []'})
-vim.keymap.set("n",'<Leader>[$','c$[]<ESC>P',{desc = 'Surround word with []'})
-vim.keymap.set("n",'<Leader>[w','ciw[]<ESC>P',{desc = 'Surround cursor to end of line with []'})
+vim.keymap.set("n",'<Leader>[$','c$[]<ESC>P',{desc = 'Surround cursor to end of line with []'})
+vim.keymap.set("n",'<Leader>[w','ciw[]<ESC>P',{desc = 'Surround word with []'})
 
 vim.keymap.set("n",'<Leader>{c','0i{<ESC>A}<ESC>',{desc = 'Surround line with {}'})
-vim.keymap.set("n",'<Leader>{$','c${}<ESC>P',{desc = 'Surround word with {}'})
-vim.keymap.set("n",'<Leader>{w','ciw{}<ESC>P',{desc = 'Surround cursor to end of line with {}'})
+vim.keymap.set("n",'<Leader>{$','c${}<ESC>P',{desc = 'Surround cursor to end of line with {}'})
+vim.keymap.set("n",'<Leader>{w','ciw{}<ESC>P',{desc = 'Surround word with {}'})
