@@ -11,15 +11,6 @@ vim.keymap.set("","<down>","<nop>",{noremap=true})
 vim.keymap.set("i","<up>","<nop>",{noremap=true})
 vim.keymap.set("i","<down>","<nop>",{noremap=true})
 
---File Navigation
-vim.keymap.set("n","<Tab>",function()
-    require("mini.files").open()
-end,{desc="Navigate files",nowait=true})
-    
-vim.keymap.set("n","<leader><Tab>",function()
-    require("mini.files").open(vim.fn.stdpath("config"))
-end,{desc="Navigate to config",nowait=true})
-
 --Telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
@@ -39,7 +30,7 @@ vim.keymap.set("n", "Y", "y$", { desc = "Yank to end of line" })
 --Writing/Quitting
 vim.keymap.set("n","<C-q>",":bd<cr>",{nowait=true,desc="Quit buffer"})
 vim.keymap.set("n","<leader>u",":u0<cr>",{nowait=true,desc="Undo all changes in buffer"})
-vim.keymap.set("n","<leader><ESC><ESC>",":q!<cr>",{nowait=true,desc="Quit Neovim"})
+vim.keymap.set("n","<leader><ESC>",":q!<cr>",{nowait=true,desc="Quit Neovim"})
 vim.keymap.set("n","<C-s>",":w<cr>",{nowait=true,desc="Write buffer"})
 
 --Splits
