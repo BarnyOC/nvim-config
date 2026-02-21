@@ -6,7 +6,7 @@ vim.api.nvim_create_autocmd("FileType", {
     end
 })
 
-vim.cmd [[colorscheme cyberdream]]
+vim.cmd [[colorscheme eldritch]]
 require("config.options")
 require("config.key-maps")
 require("config.godot")

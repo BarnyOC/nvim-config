@@ -6,5 +6,6 @@ return{
   { "joshdick/onedark.vim", name = 'one-dark', lazy = false, priority = 1004},
   { "dracula/vim",name = "dracula",lazy = false, priority = 1005},
   { "nyoom-engineering/oxocarbon.nvim",name = "oxocarbon",lazy = false, priority = 1006},
-  {"scottmckendry/cyberdream.nvim",lazy=false,priority=1007 }
+  {"scottmckendry/cyberdream.nvim",lazy=false,priority=1007 },
+  { "eldritch-theme/eldritch.nvim", name = "eldritch", lazy = false, priority = 1008, opts = {} }
 }
