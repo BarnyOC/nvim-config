@@ -13,9 +13,6 @@ return
         -- 'none' for no mappings
         keymap = { 
             preset = 'super-tab',
-              ['<C-k>'] = { 'select_prev', 'fallback' },
-              ['<C-j>'] = { 'select_next', 'fallback' }, 
-              ['<C-l>'] = { 'accept', 'fallback' }, 
           },
         appearance = {
           nerd_font_variant = 'mono'
