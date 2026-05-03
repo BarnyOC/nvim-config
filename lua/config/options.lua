@@ -83,28 +83,3 @@ vim.opt.wildignore:append({ "*.o", "*.obj", "*.pyc", "*.class", "*.jar" })
 -- Performance improvements
 vim.opt.redrawtime = 10000
 vim.opt.maxmempattern = 20000
-
-
--- Legacy Settings
---vim.o.expandtab = true
---vim.o.tabstop = 2
---vim.o.softtabstop = 2
---vim.o.shiftwidth = 2
---vim.o.relativenumber = true
---vim.o.number = true
---vim.o.syntax = 'enable'
---vim.o.wrap = true
---vim.opt.fillchars = { eob = " " }
---vim.o.splitright = true
---vim.o.splitbelow = true
---vim.o.splitkeep = 'screen'
---vim.opt.mouse = ""
---
-----set background to transparent
---vim.cmd [[
---  highlight Normal guibg=none
---  highlight NormalNC guibg=none
---  highlight NonText guibg=none
---  highlight Normal ctermbg=none
---  highlight NonText ctermbg=none
---]]

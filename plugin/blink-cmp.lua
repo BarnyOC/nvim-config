@@ -1,11 +1,6 @@
-return
-{
-    {
-      'saghen/blink.cmp',
-      dependencies = { 'rafamadriz/friendly-snippets' },
-      version = '1.*',
-      ---@module 'blink.cmp'
-      ---@type blink.cmp.Config
+vim.pack.add({ 'https://github.com/rafamadriz/friendly-snippets','https://github.com/saghen/blink.cmp' })
+
+require("blink-cmp").setup({
       opts = {
         -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
         -- 'super-tab' for mappings similar to vscode (tab to accept)
@@ -36,5 +31,4 @@ return
         fuzzy = { implementation = "prefer_rust_with_warning" }
       },
       opts_extend = { "sources.default" }
-    }
-}
+    })
