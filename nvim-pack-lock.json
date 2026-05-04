@@ -4,6 +4,10 @@
       "rev": "80f5dd3f11049f1c3a87557718d4e55556a0e3f5",
       "src": "https://github.com/saghen/blink.cmp"
     },
+    "blink.lib": {
+      "rev": "f29d8bac6549bc1e7d699c83f680823d7def98bd",
+      "src": "https://github.com/saghen/blink.lib"
+    },
     "bufferline.nvim": {
       "rev": "655133c3b4c3e5e05ec549b9f8cc2894ac6f51b3",
       "src": "https://github.com/akinsho/bufferline.nvim"
@@ -43,6 +47,10 @@
     "tiny-inline-diagnostic.nvim": {
       "rev": "147af4e49f51dd48f41972de26552872b8ba7b25",
       "src": "https://github.com/rachartier/tiny-inline-diagnostic.nvim"
+    },
+    "vim-github-dark": {
+      "rev": "25361ac70c66d776bdcf5d749042f07e6e7f50ff",
+      "src": "https://github.com/vv9k/vim-github-dark"
     },
     "yazi.nvim": {
       "rev": "d6ffa819eac0acc071664aa3d8a10c02f66ee0b6",
