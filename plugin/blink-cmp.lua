@@ -4,7 +4,9 @@ vim.pack.add({
     'https://github.com/saghen/blink.cmp'
 })
 
-require("blink-cmp").setup({
+local cmp = require('blink.cmp')
+cmp.build():wait(60000)
+cmp.setup({
     -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
     -- 'super-tab' for mappings similar to vscode (tab to accept)
     -- 'enter' for enter to accept
