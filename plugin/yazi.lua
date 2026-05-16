@@ -19,4 +19,4 @@ require('yazi').setup({
 )
 
 -- Keymappings
-vim.keymap.set({'n','v'}, 'f', "<cmd>Yazi<cr>",{ desc = 'Open yazi at the current file' })
+-- vim.keymap.set({'n','v'}, 'f', "<cmd>Yazi<cr>",{ desc = 'Open yazi at the current file' })
