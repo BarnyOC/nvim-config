@@ -1,16 +1,16 @@
-return
-{
-    {
-      'saghen/blink.cmp',
-      dependencies = { 'rafamadriz/friendly-snippets' },
-      version = '1.*',
-      ---@module 'blink.cmp'
-      ---@type blink.cmp.Config
-      opts = {
-        -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
-        -- 'super-tab' for mappings similar to vscode (tab to accept)
-        -- 'enter' for enter to accept
-        -- 'none' for no mappings
+vim.pack.add({
+    'https://github.com/saghen/blink.lib',
+    'https://github.com/rafamadriz/friendly-snippets',
+    'https://github.com/saghen/blink.cmp'
+})
+
+local cmp = require('blink.cmp')
+cmp.build():wait(60000)
+cmp.setup({
+    -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
+    -- 'super-tab' for mappings similar to vscode (tab to accept)
+    -- 'enter' for enter to accept
+    -- 'none' for no mappings
         keymap = { 
             preset = 'super-tab',
           },
@@ -34,7 +34,5 @@ return
           default = { 'lsp', 'path', 'snippets', 'buffer' },
         },
         fuzzy = { implementation = "prefer_rust_with_warning" }
-      },
-      opts_extend = { "sources.default" }
-    }
-}
+      }
+    )
