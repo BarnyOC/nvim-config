@@ -28,6 +28,10 @@
       "rev": "cb8445f8ce85d957416c106b780efd51c6298f89",
       "src": "https://github.com/mason-org/mason.nvim"
     },
+    "mini.clue": {
+      "rev": "f6978fb031023ee0b0aeb2abdb44abb87577bf38",
+      "src": "https://github.com/nvim-mini/mini.clue"
+    },
     "mini.comment": {
       "rev": "8e5ff3ed3cc0e8f216617aae01020c00c20f7a87",
       "src": "https://github.com/nvim-mini/mini.comment"
@@ -43,6 +47,15 @@
     "mini.pick": {
       "rev": "437d44eb57312f23e6b931704694fc294922cd88",
       "src": "https://github.com/nvim-mini/mini.pick"
+    },
+    "neo-tree.nvim": {
+      "rev": "83e7a2982fd12b9c3d35bc39dd5877cd91a02a61",
+      "src": "https://github.com/nvim-neo-tree/neo-tree.nvim",
+      "version": "3.0.0 - 4.0.0"
+    },
+    "nui.nvim": {
+      "rev": "de740991c12411b663994b2860f1a4fd0937c130",
+      "src": "https://github.com/MunifTanjim/nui.nvim"
     },
     "nvim-lspconfig": {
       "rev": "31026a13eefb20681124706a79fc1df6bf11ab27",
@@ -60,6 +73,10 @@
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
       "src": "https://github.com/nvim-lua/plenary.nvim"
     },
+    "precognition.nvim": {
+      "rev": "683c1787d13be37fc4517f4b7488212205c95545",
+      "src": "https://github.com/tris203/precognition.nvim"
+    },
     "telescope-fzf-native.nvim": {
       "rev": "6fea601bd2b694c6f2ae08a6c6fab14930c60e2c",
       "src": "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
@@ -75,6 +92,10 @@
     "vim-github-dark": {
       "rev": "25361ac70c66d776bdcf5d749042f07e6e7f50ff",
       "src": "https://github.com/vv9k/vim-github-dark"
+    },
+    "vim-vendetta": {
+      "rev": "37c689f57e8cfc20203c523eeab25d2e8163289a",
+      "src": "https://github.com/evgenyzinoviev/vim-vendetta"
     },
     "yazi.nvim": {
       "rev": "d6ffa819eac0acc071664aa3d8a10c02f66ee0b6",
