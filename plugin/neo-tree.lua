@@ -11,4 +11,5 @@ vim.pack.add({
 })
 
 require("neo-tree").setup({})
-vim.keymap.set('n', 'f', ":Neotree toggle show reveal left <CR>", { desc = 'Toggle neo-tree' })
+vim.keymap.set('n', '<C-y>', ":Neotree toggle reveal left<CR>", { nowait = true, desc = 'Toggle neo-tree' })
+vim.keymap.set('n', 'q', ":Neotree close<CR>", { desc = 'Toggle neo-tree' })
