@@ -1,6 +1,6 @@
 --Leader key
 vim.keymap.set("n"," ","<nop>")
-vim.g.mapleader = " "
+vim.g.mapleader = "\\"
 
 --Motions
 vim.keymap.set("n","W","b",{nowait=true})
@@ -23,7 +23,7 @@ vim.keymap.set("n", "Y", "y$", { desc = "Yank to end of line" })
 --Writing/Quitting
 vim.keymap.set("n","<C-q>",":bd<cr>",{nowait=true,desc="Quit buffer"})
 vim.keymap.set("n","<leader>u",":u0<cr>",{nowait=true,desc="Undo all changes in buffer"})
-vim.keymap.set("n","<leader><ESC>",":q!<cr>",{nowait=true,desc="Quit Neovim"})
+vim.keymap.set("n","<ESC><ESC>",":q!<cr>",{nowait=true,desc="Quit Neovim"})
 vim.keymap.set("n","<C-s>",":w<cr>",{nowait=true,desc="Write buffer"})
 
 --Splits
@@ -41,23 +41,3 @@ vim.keymap.set("n", "<leader>rl", ":so $MYVIMRC<CR>", { desc = "Reload config" }
 vim.keymap.set("n","<S-h>",":bprevious<CR>",{nowait=true,silent=true})
 vim.keymap.set("n","<S-l>",":bnext<CR>",{nowait=true,silent=true})
 
--- Encapsulate
-vim.keymap.set("n",'<Leader>"c','0i"<ESC>A"<ESC>'   ,{desc = 'Surround line with ""'})
-vim.keymap.set("n",'<Leader>"w','ciw""<ESC>P'       ,{desc = 'Surround word with ""'})
-vim.keymap.set("n",'<Leader>"$','c$""<ESC>P'        ,{desc = 'Surround cursor to end of line with ""'})
-
-vim.keymap.set("n","<Leader>'c","0i'<ESC>A'<ESC>"   ,{desc = "Surround line with ''"})
-vim.keymap.set("n","<Leader>'w","ciw''<ESC>P"       ,{desc = "Surround word with ''"})
-vim.keymap.set("n","<Leader>'$","c$''<ESC>P"        ,{desc = "Surround cursor to end of line with ''"})
-
-vim.keymap.set("n",'<Leader>(c','0i(<ESC>A)<ESC>',{desc = 'Surround line with ()'})
-vim.keymap.set("n",'<Leader>($','c$()<ESC>P',{desc = 'Surround cursor to end of line word with ()'})
-vim.keymap.set("n",'<Leader>(w','ciw()<ESC>P',{desc = 'Surround word with ()'})
-
-vim.keymap.set("n",'<Leader>[c','0i[<ESC>A]<ESC>',{desc = 'Surround line with []'})
-vim.keymap.set("n",'<Leader>[$','c$[]<ESC>P',{desc = 'Surround cursor to end of line with []'})
-vim.keymap.set("n",'<Leader>[w','ciw[]<ESC>P',{desc = 'Surround word with []'})
-
-vim.keymap.set("n",'<Leader>{c','0i{<ESC>A}<ESC>',{desc = 'Surround line with {}'})
-vim.keymap.set("n",'<Leader>{$','c${}<ESC>P',{desc = 'Surround cursor to end of line with {}'})
-vim.keymap.set("n",'<Leader>{w','ciw{}<ESC>P',{desc = 'Surround word with {}'})
