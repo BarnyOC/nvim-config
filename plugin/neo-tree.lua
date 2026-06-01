@@ -10,7 +10,13 @@ vim.pack.add({
   "https://github.com/nvim-tree/nvim-web-devicons",
 })
 
-require("neo-tree").setup({})
+require("neo-tree").setup({
+    default_component_configs = {
+        git_status = {
+          symbols = false
+        }
+      }
+  })
 vim.keymap.set('n', '<C-f>', ":Neotree reveal current<CR>", { silent = true, nowait = true, desc = 'View file-system'})
 vim.keymap.set('n', '<C-b>', ":Neotree buffers reveal current<CR>", { silent = true, nowait = true, desc = 'View buffers' })
 vim.keymap.set('n', 'q', ":Neotree close<CR>", {  silent = true, nowait = true, desc = 'Quit neo-tree' })
