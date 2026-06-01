@@ -44,10 +44,6 @@
       "rev": "42387c7fe68fc0b6e95eaf37f1bb76e7bffaa0d9",
       "src": "https://github.com/nvim-mini/mini.pairs"
     },
-    "mini.pick": {
-      "rev": "437d44eb57312f23e6b931704694fc294922cd88",
-      "src": "https://github.com/nvim-mini/mini.pick"
-    },
     "neo-tree.nvim": {
       "rev": "83e7a2982fd12b9c3d35bc39dd5877cd91a02a61",
       "src": "https://github.com/nvim-neo-tree/neo-tree.nvim",
