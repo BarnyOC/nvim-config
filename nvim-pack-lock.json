@@ -72,10 +72,6 @@
       "rev": "683c1787d13be37fc4517f4b7488212205c95545",
       "src": "https://github.com/tris203/precognition.nvim"
     },
-    "snipe.nvim": {
-      "rev": "d2d196c335919767803f905d573ce66340e33ee6",
-      "src": "https://github.com/leath-dub/snipe.nvim"
-    },
     "telescope-fzf-native.nvim": {
       "rev": "6fea601bd2b694c6f2ae08a6c6fab14930c60e2c",
       "src": "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
