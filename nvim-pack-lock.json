@@ -24,14 +24,6 @@
       "rev": "cb8445f8ce85d957416c106b780efd51c6298f89",
       "src": "https://github.com/mason-org/mason.nvim"
     },
-    "mini.clue": {
-      "rev": "f6978fb031023ee0b0aeb2abdb44abb87577bf38",
-      "src": "https://github.com/nvim-mini/mini.clue"
-    },
-    "mini.comment": {
-      "rev": "8e5ff3ed3cc0e8f216617aae01020c00c20f7a87",
-      "src": "https://github.com/nvim-mini/mini.comment"
-    },
     "mini.files": {
       "rev": "02874bc653fbecf2bee2c65441d0ebd09110f011",
       "src": "https://github.com/nvim-mini/mini.files"
