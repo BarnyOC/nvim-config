@@ -1,17 +1,5 @@
 {
   "plugins": {
-    "blink.cmp": {
-      "rev": "80f5dd3f11049f1c3a87557718d4e55556a0e3f5",
-      "src": "https://github.com/saghen/blink.cmp"
-    },
-    "blink.lib": {
-      "rev": "f29d8bac6549bc1e7d699c83f680823d7def98bd",
-      "src": "https://github.com/saghen/blink.lib"
-    },
-    "friendly-snippets": {
-      "rev": "6cd7280adead7f586db6fccbd15d2cac7e2188b9",
-      "src": "https://github.com/rafamadriz/friendly-snippets"
-    },
     "lualine.nvim": {
       "rev": "131a558e13f9f28b15cd235557150ccb23f89286",
       "src": "https://github.com/nvim-lualine/lualine.nvim"
