@@ -1,6 +1,7 @@
 --vim.cmd [[colorscheme eldritch]]
 require("config.options")
 require("config.key-maps")
+require("config.completion")
 --require("config.godot")
 
 -- Enable native LSP servers
