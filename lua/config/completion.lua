@@ -1,7 +1,7 @@
 -- Native Neovim 0.12 completion (barest setup: LSP + current buffer).
 
 vim.o.autocomplete = true
-vim.o.completeopt = 'menuone,popup,noselect,nearest'
+vim.o.completeopt = 'menuone,popup,nearest,longest,fuzzy'
 vim.o.complete = '.^12,o'
 
 -- Ensure LSP omnifunc is wired up (it usually is on attach, but be safe).
